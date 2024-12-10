@@ -7,6 +7,7 @@ import Labs from "./components/Lab";
 import NotFound from "./components/NotFound";
 import Support from "./components/Support";
 import {Link} from "react-router-dom";
+import MainHeader from './components/MainHeader';
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
         </ul>
       </nav>
       <Routes>
-        <Route path="/" element={<Home/>}>
+        <Route path="/" element={<MainHeader/>}>
+        <Route index element={<Home/>}></Route>{/**Default route */}
         <Route path="/support" element={<Support/>}></Route>
         <Route path="/about" element={<About/>}></Route>
         <Route path="/labs" element={<Labs/>}></Route>
