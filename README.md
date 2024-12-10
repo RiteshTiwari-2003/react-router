@@ -68,3 +68,27 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# navlink and link
+navlink is slietly different from link 
+when you use navlink then at present time wherever you present or on which route you present now that class is active at that time means in that route a class is added which name is active.
+so you can easily add the active class property like
+.active{
+    color:aqua
+}
+means on which route you present on present time that link color change from other which is aqua
+but you can also use nested route 
+like home route or "/" is parent route of all children route 
+like this
+in app.js we update routes like this
+<Routes>
+        <Route path="/" element={<Home/>}>
+        <Route path="/support" element={<Support/>}></Route>
+        <Route path="/about" element={<About/>}></Route>
+        <Route path="/labs" element={<Labs/>}></Route>
+        <Route path="*" element={<NotFound/>}></Route>
+        </Route>
+      </Routes>
+but 
+after thius when we click on home it goes on home when we click on about it goes on home page again and whe we click on labs it goes on again home page so parent component prevent me from going towords child components so for this problem we use one solution which is outlet tag
+if you want that parent component allow to see children components then we should use outlet in parent component like in Home component 
