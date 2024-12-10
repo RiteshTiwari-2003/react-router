@@ -3,17 +3,19 @@ import { Route } from 'react-router-dom';
 import './App.css';
 import Home from "./components/Home";
 import About from "./components/About";
-import Lab from "./components/Lab";
+import Labs from "./components/Lab";
+import NotFound from "./components/NotFound";
+import Support from "./components/Support";
 
 function App() {
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<Home/>}></Route>
-        <Route path="/support" element={<div>Support Page</div>}></Route>
-        <Route path="/about" element={<div>About Page</div>}></Route>
-        <Route path="/labs" element={<div>labs Page</div>}></Route>
-        <Route path="*" element={<div>Not Found</div>}></Route>
+        <Route path="/support" element={<Support/>}></Route>
+        <Route path="/about" element={<About/>}></Route>
+        <Route path="/labs" element={<Labs/>}></Route>
+        <Route path="*" element={<NotFound/>}></Route>
       </Routes>
     </div>
   );
