@@ -92,3 +92,8 @@ in app.js we update routes like this
 but 
 after thius when we click on home it goes on home when we click on about it goes on home page again and whe we click on labs it goes on again home page so parent component prevent me from going towords child components so for this problem we use one solution which is outlet tag
 if you want that parent component allow to see children components then we should use outlet in parent component like in Home component 
+
+# what is useNavigate hook in react?
+
+usenavigate hook is a react router hook used for programmatically navigating between in a react application, 
+it is the part of react router's v6 api and provide a simple and powerfull way to control navigation without relying on the <Link> or <NavLink>
